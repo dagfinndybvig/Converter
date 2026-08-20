@@ -44,60 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredData = [...CLASSIFICATION_DATA];
     let currentCategory = 'all';
 
-    // Categorize subjects based on comments in data.js
-    const getSubjectCategory = (subject) => {
-        // Extract category from subject string based on known patterns
-        const subjectLower = subject.toLowerCase();
-        
-        if (subjectLower.includes('philosophy') || subjectLower.includes('psychology')) {
-            return 'Philosophy & Psychology';
-        }
-        if (subjectLower.includes('religion')) {
-            return 'Religion';
-        }
-        if (subjectLower.includes('social sciences') || subjectLower.includes('economics') || 
-            subjectLower.includes('political') || subjectLower.includes('law') || 
-            subjectLower.includes('education') || subjectLower.includes('sociology') ||
-            subjectLower.includes('anthropology')) {
-            return 'Social Sciences';
-        }
-        if (subjectLower.includes('language') || subjectLower.includes('literature') || 
-            subjectLower.includes('linguistics') || subjectLower.includes('english') ||
-            subjectLower.includes('french')) {
-            return 'Language & Literature';
-        }
-        if (subjectLower.includes('science') || subjectLower.includes('mathematics') || 
-            subjectLower.includes('computer') || subjectLower.includes('physics') ||
-            subjectLower.includes('chemistry') || subjectLower.includes('biology') ||
-            subjectLower.includes('astronomy') || subjectLower.includes('botany')) {
-            return 'Science';
-        }
-        if (subjectLower.includes('medicine') || subjectLower.includes('health') || 
-            subjectLower.includes('anatomy') || subjectLower.includes('physiology') ||
-            subjectLower.includes('pharmacology') || subjectLower.includes('surgery') ||
-            subjectLower.includes('internal medicine')) {
-            return 'Medicine & Health';
-        }
-        if (subjectLower.includes('technology') || subjectLower.includes('engineering') ||
-            subjectLower.includes('electrical') || subjectLower.includes('chemical')) {
-            return 'Technology';
-        }
-        if (subjectLower.includes('arts') || subjectLower.includes('music') || 
-            subjectLower.includes('fine arts') || subjectLower.includes('visual')) {
-            return 'Arts';
-        }
-        if (subjectLower.includes('history') || subjectLower.includes('geography') ||
-            subjectLower.includes('maps') || subjectLower.includes('united states')) {
-            return 'History & Geography';
-        }
-        if (subjectLower.includes('bibliography') || subjectLower.includes('library') || 
-            subjectLower.includes('general works') || subjectLower.includes('information science')) {
-            return 'Miscellaneous';
-        }
-        
-        return 'Miscellaneous';
-    };
-
     // Get hierarchy display text
     const getHierarchyText = (system, code, parent) => {
         if (!parent) return '';
@@ -162,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Group subjects by category
             const grouped = {};
             filteredData.forEach(subject => {
-                const category = getSubjectCategory(subject.subject);
+                const category = subject.category || 'Miscellaneous';
                 if (!grouped[category]) {
                     grouped[category] = [];
                 }
@@ -281,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Filter by category
         if (category !== 'all') {
-            result = result.filter(subject => getSubjectCategory(subject.subject) === category);
+            result = result.filter(subject => (subject.category || 'Miscellaneous') === category);
         }
 
         // Filter by search term

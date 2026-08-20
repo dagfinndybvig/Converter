@@ -5,6 +5,7 @@ const CLASSIFICATION_DATA = [
   // ===== PHILOSOPHY & PSYCHOLOGY =====
   {
     subject: "Philosophy (General)",
+    category: "Philosophy & Psychology",
     lcc: { code: "B", name: "Philosophy. Psychology. Religion", parent: null },
     ddc: { code: "100", name: "Philosophy & psychology", parent: null },
     udc: { code: "1", name: "Philosophy", parent: null },
@@ -12,6 +13,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Metaphysics",
+    category: "Philosophy & Psychology",
     lcc: { code: "BD111-701", name: "Speculative philosophy. Metaphysics", parent: "B" },
     ddc: { code: "110", name: "Metaphysics", parent: "100" },
     udc: { code: "11", name: "Metaphysics", parent: "1" },
@@ -19,6 +21,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Epistemology",
+    category: "Philosophy & Psychology",
     lcc: { code: "BD143-237", name: "Epistemology. Theory of knowledge", parent: "B" },
     ddc: { code: "121", name: "Epistemology, causation, humankind", parent: "100" },
     udc: { code: "16", name: "Logic. Epistemology. Theory of knowledge", parent: "1" },
@@ -26,6 +29,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Logic",
+    category: "Philosophy & Psychology",
     lcc: { code: "BC", name: "Logic", parent: "B" },
     ddc: { code: "160", name: "Logic", parent: "100" },
     udc: { code: "16", name: "Logic. Epistemology. Theory of knowledge", parent: "1" },
@@ -33,6 +37,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Ethics (Moral Philosophy)",
+    category: "Philosophy & Psychology",
     lcc: { code: "BJ1-1725", name: "Ethics", parent: "B" },
     ddc: { code: "170", name: "Ethics", parent: "100" },
     udc: { code: "17", name: "Ethics. Moral philosophy", parent: "1" },
@@ -40,6 +45,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Psychology",
+    category: "Philosophy & Psychology",
     lcc: { code: "BF1-990", name: "Psychology", parent: "B" },
     ddc: { code: "150", name: "Psychology", parent: "100" },
     udc: { code: "159.9", name: "Psychology", parent: "1" },
@@ -47,6 +53,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Experimental Psychology",
+    category: "Philosophy & Psychology",
     lcc: { code: "BF180-198.7", name: "Experimental psychology", parent: "BF" },
     ddc: { code: "150.72", name: "Research methods in psychology", parent: "150" },
     udc: { code: "159.953", name: "Experimental psychology", parent: "159.9" },
@@ -56,6 +63,7 @@ const CLASSIFICATION_DATA = [
   // ===== RELIGION =====
   {
     subject: "Religion (General)",
+    category: "Religion",
     lcc: { code: "BL- BX", name: "Religion", parent: "B" },
     ddc: { code: "200", name: "Religion", parent: null },
     udc: { code: "2", name: "Religion. Theology", parent: null },
@@ -63,6 +71,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Christianity",
+    category: "Religion",
     lcc: { code: "BR1-1725", name: "Christianity", parent: "BL" },
     ddc: { code: "270", name: "History of Christianity", parent: "200" },
     udc: { code: "27", name: "Christianity", parent: "2" },
@@ -70,6 +79,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Buddhism",
+    category: "Religion",
     lcc: { code: "BQ1-9800", name: "Buddhism", parent: "BL" },
     ddc: { code: "294.3", name: "Theravada Buddhism", parent: "200" },
     udc: { code: "294.3", name: "Buddhism", parent: "2" },
@@ -77,6 +87,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Islam",
+    category: "Religion",
     lcc: { code: "BP1-253", name: "Islam. Bahai Faith. Theosophy, etc.", parent: "BL" },
     ddc: { code: "297", name: "Islam, Babism & Bahai Faith", parent: "200" },
     udc: { code: "297", name: "Islam", parent: "2" },
@@ -84,6 +95,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Hinduism",
+    category: "Religion",
     lcc: { code: "BL1100-1295", name: "Hinduism", parent: "BL" },
     ddc: { code: "294.5", name: "Hinduism", parent: "200" },
     udc: { code: "294.5", name: "Hinduism", parent: "2" },
@@ -93,6 +105,7 @@ const CLASSIFICATION_DATA = [
   // ===== SOCIAL SCIENCES =====
   {
     subject: "Social Sciences (General)",
+    category: "Social Sciences",
     lcc: { code: "H", name: "Social Sciences", parent: null },
     ddc: { code: "300", name: "Social sciences", parent: null },
     udc: { code: "3", name: "Social sciences", parent: null },
@@ -100,6 +113,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Sociology & Anthropology",
+    category: "Social Sciences",
     lcc: { code: "HM", name: "Sociology (General)", parent: "H" },
     ddc: { code: "301", name: "Sociology & anthropology", parent: "300" },
     udc: { code: "316", name: "Sociology", parent: "3" },
@@ -107,6 +121,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Economics",
+    category: "Social Sciences",
     lcc: { code: "HB1-3840", name: "Economic theory. Demography", parent: "H" },
     ddc: { code: "330", name: "Economics", parent: "300" },
     udc: { code: "33", name: "Economics. Economic science", parent: "3" },
@@ -114,6 +129,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Political Science",
+    category: "Social Sciences",
     lcc: { code: "JC", name: "Political theory", parent: "J" },
     ddc: { code: "320", name: "Political science", parent: "300" },
     udc: { code: "32", name: "Politics", parent: "3" },
@@ -121,6 +137,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Law",
+    category: "Social Sciences",
     lcc: { code: "K", name: "Law", parent: null },
     ddc: { code: "340", name: "Law", parent: "300" },
     udc: { code: "34", name: "Law. Jurisprudence", parent: "3" },
@@ -128,6 +145,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Education",
+    category: "Social Sciences",
     lcc: { code: "L", name: "Education", parent: null },
     ddc: { code: "370", name: "Education", parent: "300" },
     udc: { code: "37", name: "Education. Training. Teaching", parent: "3" },
@@ -137,6 +155,7 @@ const CLASSIFICATION_DATA = [
   // ===== LANGUAGE & LITERATURE =====
   {
     subject: "Linguistics",
+    category: "Language & Literature",
     lcc: { code: "P1-1091", name: "Philology. Linguistics", parent: "P" },
     ddc: { code: "410", name: "Linguistics", parent: "400" },
     udc: { code: "81", name: "Linguistics. Philology", parent: "8" },
@@ -144,6 +163,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "English Language",
+    category: "Language & Literature",
     lcc: { code: "PE1-3695", name: "English", parent: "P" },
     ddc: { code: "420", name: "English & Old English languages", parent: "400" },
     udc: { code: "82", name: "English. Old English literature", parent: "8" },
@@ -151,6 +171,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "English Literature",
+    category: "Language & Literature",
     lcc: { code: "PR1-9680", name: "English literature", parent: "P" },
     ddc: { code: "820", name: "English & Old English literatures", parent: "800" },
     udc: { code: "821.111", name: "English literature", parent: "82" },
@@ -158,6 +179,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "French Literature",
+    category: "Language & Literature",
     lcc: { code: "PQ1-3999", name: "French literature - Italian literature - Spanish literature - Portuguese literature", parent: "P" },
     ddc: { code: "840", name: "French & related literatures", parent: "800" },
     udc: { code: "84", name: "French literature", parent: "8" },
@@ -167,6 +189,7 @@ const CLASSIFICATION_DATA = [
   // ===== SCIENCE =====
   {
     subject: "Science (General)",
+    category: "Science",
     lcc: { code: "Q", name: "Science", parent: null },
     ddc: { code: "500", name: "Pure Science & Mathematics", parent: null },
     udc: { code: "5", name: "Mathematics & Natural sciences", parent: null },
@@ -174,6 +197,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Mathematics",
+    category: "Science",
     lcc: { code: "QA1-939", name: "Mathematics", parent: "Q" },
     ddc: { code: "510", name: "Mathematics", parent: "500" },
     udc: { code: "51", name: "Mathematics", parent: "5" },
@@ -181,6 +205,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Computer Science",
+    category: "Science",
     lcc: { code: "QA75.5-76.95", name: "Computers. Computer Science", parent: "QA" },
     ddc: { code: "004", name: "Computer science", parent: "000" },
     udc: { code: "004", name: "Computer science & technology", parent: "00" },
@@ -188,6 +213,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Artificial Intelligence",
+    category: "Science",
     lcc: { code: "Q334-342", name: "Artificial intelligence", parent: "QA75.5-76.95" },
     ddc: { code: "006.3", name: "Artificial intelligence", parent: "004" },
     udc: { code: "004.8", name: "Artificial intelligence", parent: "004" },
@@ -195,6 +221,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Astronomy",
+    category: "Science",
     lcc: { code: "QB1-991", name: "Astronomy", parent: "Q" },
     ddc: { code: "520", name: "Astronomy & allied sciences", parent: "500" },
     udc: { code: "52", name: "Astronomy. Geodesy. Space exploration", parent: "5" },
@@ -202,6 +229,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Physics",
+    category: "Science",
     lcc: { code: "QC1-999", name: "Physics", parent: "Q" },
     ddc: { code: "530", name: "Physics", parent: "500" },
     udc: { code: "53", name: "Physics", parent: "5" },
@@ -209,6 +237,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Chemistry",
+    category: "Science",
     lcc: { code: "QD1-999", name: "Chemistry", parent: "Q" },
     ddc: { code: "540", name: "Chemistry & allied sciences", parent: "500" },
     udc: { code: "54", name: "Chemistry. Crystallography. Mineralogy", parent: "5" },
@@ -216,6 +245,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Biology",
+    category: "Science",
     lcc: { code: "QH1-999", name: "Natural history - Biology", parent: "Q" },
     ddc: { code: "570", name: "Life sciences", parent: "500" },
     udc: { code: "57", name: "Biological sciences in general", parent: "5" },
@@ -223,6 +253,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Botany",
+    category: "Science",
     lcc: { code: "QK1-989", name: "Botany", parent: "Q" },
     ddc: { code: "580", name: "Plants (Botany)", parent: "500" },
     udc: { code: "58", name: "Botany", parent: "5" },
@@ -232,6 +263,7 @@ const CLASSIFICATION_DATA = [
   // ===== MEDICINE & HEALTH (NLM focus) =====
   {
     subject: "Medicine (General)",
+    category: "Medicine & Health",
     lcc: { code: "R", name: "Medicine", parent: null },
     ddc: { code: "610", name: "Medicine & health", parent: "600" },
     udc: { code: "61", name: "Medicine. Health", parent: "6" },
@@ -240,6 +272,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Anatomy",
+    category: "Medicine & Health",
     lcc: { code: "QM1-695", name: "Human anatomy", parent: "Q" },
     ddc: { code: "611", name: "Human anatomy, cytology, histology", parent: "610" },
     udc: { code: "611", name: "Anatomy", parent: "61" },
@@ -248,6 +281,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Physiology",
+    category: "Medicine & Health",
     lcc: { code: "QP1-981", name: "Physiology", parent: "Q" },
     ddc: { code: "612", name: "Human physiology", parent: "610" },
     udc: { code: "612", name: "Physiology", parent: "61" },
@@ -256,6 +290,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Pharmacology",
+    category: "Medicine & Health",
     lcc: { code: "RM1-950", name: "Therapeutics. Pharmacology", parent: "R" },
     ddc: { code: "615", name: "Pharmacology & therapeutics", parent: "610" },
     udc: { code: "615", name: "Pharmacology. Therapeutics. Toxicology", parent: "61" },
@@ -264,6 +299,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Internal Medicine",
+    category: "Medicine & Health",
     lcc: { code: "RC31-1245", name: "Internal medicine", parent: "R" },
     ddc: { code: "616", name: "Diseases", parent: "610" },
     udc: { code: "616", name: "Pathology. Clinical medicine", parent: "61" },
@@ -272,6 +308,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Surgery",
+    category: "Medicine & Health",
     lcc: { code: "RD1-811", name: "Surgery", parent: "R" },
     ddc: { code: "617", name: "Surgery & related medical specialties", parent: "610" },
     udc: { code: "617", name: "Surgery. Orthopaedics. Ophthalmology", parent: "61" },
@@ -282,6 +319,7 @@ const CLASSIFICATION_DATA = [
   // ===== TECHNOLOGY =====
   {
     subject: "Technology (General)",
+    category: "Technology",
     lcc: { code: "T", name: "Technology", parent: null },
     ddc: { code: "600", name: "Technology (Applied sciences)", parent: null },
     udc: { code: "6", name: "Applied Sciences. Medicine. Technology", parent: null },
@@ -289,6 +327,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Engineering",
+    category: "Technology",
     lcc: { code: "TA1-2040", name: "Engineering (General). Civil engineering", parent: "T" },
     ddc: { code: "620", name: "Engineering & allied operations", parent: "600" },
     udc: { code: "62", name: "Engineering. Technology in general", parent: "6" },
@@ -296,6 +335,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Chemical Engineering",
+    category: "Technology",
     lcc: { code: "TP155-156", name: "Chemical technology", parent: "TP" },
     ddc: { code: "660", name: "Chemical engineering", parent: "600" },
     udc: { code: "66", name: "Chemical technology. Chemical & related industries", parent: "6" },
@@ -303,6 +343,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Electrical Engineering",
+    category: "Technology",
     lcc: { code: "TK1-9971", name: "Electrical engineering. Electronics. Nuclear engineering", parent: "T" },
     ddc: { code: "621.3", name: "Electrical engineering", parent: "620" },
     udc: { code: "621.3", name: "Electrical engineering. Electronics", parent: "62" },
@@ -310,6 +351,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Computer Engineering",
+    category: "Technology",
     lcc: { code: "TK7885-7895", name: "Computer engineering", parent: "TK" },
     ddc: { code: "005.1", name: "Computer hardware", parent: "000" },
     udc: { code: "004.2", name: "Computer architecture & design", parent: "004" },
@@ -319,6 +361,7 @@ const CLASSIFICATION_DATA = [
   // ===== ARTS =====
   {
     subject: "Fine Arts",
+    category: "Arts",
     lcc: { code: "N", name: "Fine Arts", parent: null },
     ddc: { code: "700", name: "Arts", parent: null },
     udc: { code: "7", name: "The arts. Recreation. Entertainment. Sport", parent: null },
@@ -326,6 +369,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Visual Arts",
+    category: "Arts",
     lcc: { code: "N1-9211", name: "Visual arts", parent: "N" },
     ddc: { code: "700", name: "Arts", parent: null },
     udc: { code: "7.03", name: "Fine arts. Visual arts", parent: "7" },
@@ -333,6 +377,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Music",
+    category: "Arts",
     lcc: { code: "M", name: "Music", parent: null },
     ddc: { code: "780", name: "Music", parent: "700" },
     udc: { code: "78", name: "Music", parent: "7" },
@@ -340,6 +385,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Literature (General)",
+    category: "Arts",
     lcc: { code: "PN", name: "Literature (General)", parent: "P" },
     ddc: { code: "800", name: "Literature, rhetoric & criticism", parent: null },
     udc: { code: "8", name: "Language. Linguistics. Literature", parent: null },
@@ -349,6 +395,7 @@ const CLASSIFICATION_DATA = [
   // ===== HISTORY & GEOGRAPHY =====
   {
     subject: "History (General)",
+    category: "History & Geography",
     lcc: { code: "D", name: "History (General)", parent: null },
     ddc: { code: "900", name: "History & geography", parent: null },
     udc: { code: "9", name: "Geography. Biography. History", parent: null },
@@ -356,6 +403,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "World History",
+    category: "History & Geography",
     lcc: { code: "D1-203", name: "History (General)", parent: "D" },
     ddc: { code: "909", name: "World history", parent: "900" },
     udc: { code: "930", name: "History of the ancient world", parent: "9" },
@@ -363,6 +411,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "European History",
+    category: "History & Geography",
     lcc: { code: "D203-4001", name: "History of Europe", parent: "D" },
     ddc: { code: "940", name: "History of Europe", parent: "900" },
     udc: { code: "94", name: "History of Europe", parent: "9" },
@@ -370,6 +419,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "United States History",
+    category: "History & Geography",
     lcc: { code: "E11-143", name: "America", parent: null },
     ddc: { code: "973", name: "History of North America", parent: "900" },
     udc: { code: "973", name: "United States", parent: "9" },
@@ -377,6 +427,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Geography",
+    category: "History & Geography",
     lcc: { code: "G", name: "Geography. Anthropology. Recreation", parent: null },
     ddc: { code: "910", name: "Geography & travel", parent: "900" },
     udc: { code: "91", name: "Geography. Regional geography", parent: "9" },
@@ -384,6 +435,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Maps",
+    category: "History & Geography",
     lcc: { code: "G1000-3122", name: "Cartography", parent: "G" },
     ddc: { code: "912", name: "Graphic representations of earth", parent: "910" },
     udc: { code: "912", name: "Cartography. Maps. Plans", parent: "91" },
@@ -393,6 +445,7 @@ const CLASSIFICATION_DATA = [
   // ===== MISCELLANEOUS =====
   {
     subject: "Bibliography & Library Science",
+    category: "Miscellaneous",
     lcc: { code: "Z", name: "Bibliography. Library Science", parent: null },
     ddc: { code: "010", name: "Bibliographies", parent: "000" },
     udc: { code: "01", name: "Bibliography. Bibliology. Library science", parent: "00" },
@@ -400,6 +453,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Information Science",
+    category: "Miscellaneous",
     lcc: { code: "Z665-719", name: "Library Science. Information Science", parent: "Z" },
     ddc: { code: "020", name: "Library & information sciences", parent: "000" },
     udc: { code: "02", name: "Librarianship", parent: "0" },
@@ -407,6 +461,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "General Works",
+    category: "Miscellaneous",
     lcc: { code: "A", name: "General Works", parent: null },
     ddc: { code: "000", name: "Computer science, information & general works", parent: null },
     udc: { code: "00", name: "Science & knowledge in general. Organization. Computer science. Information. Documentation. Librarianship. Institutions. Publications", parent: null },
@@ -416,6 +471,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL PSYCHOLOGY SUBJECTS =====
   {
     subject: "Clinical Psychology",
+    category: "Philosophy & Psychology",
     lcc: { code: "RC461-508", name: "Clinical psychology", parent: "R" },
     ddc: { code: "150.195", name: "Clinical psychology", parent: "150" },
     udc: { code: "159.97", name: "Clinical psychology", parent: "159.9" },
@@ -423,6 +479,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Developmental Psychology",
+    category: "Philosophy & Psychology",
     lcc: { code: "BF713-724.85", name: "Developmental psychology. Including infant psychology, child psychology, puberty, adolescence", parent: "BF" },
     ddc: { code: "155", name: "Developmental psychology", parent: "150" },
     udc: { code: "159.922-159.923", name: "Developmental psychology", parent: "159.9" },
@@ -430,6 +487,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Social Psychology",
+    category: "Philosophy & Psychology",
     lcc: { code: "HM1001-1281", name: "Social psychology", parent: "HM" },
     ddc: { code: "302", name: "Social interaction", parent: "300" },
     udc: { code: "316.6", name: "Social psychology", parent: "316" },
@@ -437,6 +495,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Cognitive Psychology",
+    category: "Philosophy & Psychology",
     lcc: { code: "BF311-499.9", name: "Cognition. Including learning, attention, comprehension, memory, imagination, genius, intelligence, thought and thinking, psycholinguistics, mental fatigue", parent: "BF" },
     ddc: { code: "153", name: "Cognitive psychology and information processing", parent: "150" },
     udc: { code: "159.953.5", name: "Cognitive psychology", parent: "159.953" },
@@ -446,6 +505,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL LAW SUBJECTS =====
   {
     subject: "Constitutional Law",
+    category: "Social Sciences",
     lcc: { code: "K3154-3370", name: "Constitutional law", parent: "K" },
     ddc: { code: "342", name: "Constitutional & administrative law", parent: "340" },
     udc: { code: "342", name: "Constitutional law", parent: "34" },
@@ -453,6 +513,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Criminal Law",
+    category: "Social Sciences",
     lcc: { code: "K5000-5582", name: "Criminal law", parent: "K" },
     ddc: { code: "345", name: "Criminal law", parent: "340" },
     udc: { code: "343", name: "Criminal law. Penal law", parent: "34" },
@@ -460,6 +521,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "International Law",
+    category: "Social Sciences",
     lcc: { code: "JX", name: "International law", parent: "J" },
     ddc: { code: "341", name: "International law", parent: "340" },
     udc: { code: "341", name: "International law", parent: "34" },
@@ -467,6 +529,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Contract Law",
+    category: "Social Sciences",
     lcc: { code: "K850-894", name: "Contracts", parent: "K" },
     ddc: { code: "346.02", name: "Contract law", parent: "340" },
     udc: { code: "347.44", name: "Contract law", parent: "347" },
@@ -474,6 +537,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Intellectual Property Law",
+    category: "Social Sciences",
     lcc: { code: "K1401-1578", name: "Intellectual property", parent: "K" },
     ddc: { code: "346.048", name: "Intellectual property", parent: "340" },
     udc: { code: "347.77-347.78", name: "Intellectual property rights", parent: "347" },
@@ -483,6 +547,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL ENGINEERING SUBJECTS =====
   {
     subject: "Mechanical Engineering",
+    category: "Technology",
     lcc: { code: "TJ1-1570", name: "Mechanical engineering and machinery", parent: "T" },
     ddc: { code: "621.01-621.8", name: "Mechanical engineering", parent: "620" },
     udc: { code: "621.01", name: "General mechanical engineering", parent: "621" },
@@ -490,6 +555,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Civil Engineering",
+    category: "Technology",
     lcc: { code: "TA590-615", name: "Structural engineering", parent: "TA" },
     ddc: { code: "624", name: "Civil engineering", parent: "620" },
     udc: { code: "624", name: "Civil engineering and construction", parent: "62" },
@@ -497,6 +563,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Software Engineering",
+    category: "Technology",
     lcc: { code: "QA76.758-76.7675", name: "Software engineering", parent: "QA75.5-76.95" },
     ddc: { code: "005.1", name: "Computer hardware & software", parent: "004" },
     udc: { code: "004.42", name: "Software engineering", parent: "004" },
@@ -504,6 +571,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Robotics",
+    category: "Technology",
     lcc: { code: "TJ210.2-211.45", name: "Robotics. Robots", parent: "TJ" },
     ddc: { code: "629.892", name: "Robotics", parent: "620" },
     udc: { code: "007.52", name: "Robotics", parent: "007" },
@@ -511,6 +579,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Aerospace Engineering",
+    category: "Technology",
     lcc: { code: "TL500-770", name: "Aeronautical engineering", parent: "TL" },
     ddc: { code: "629.1", name: "Aerospace engineering", parent: "620" },
     udc: { code: "629.7", name: "Aerospace technology", parent: "629" },
@@ -520,6 +589,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL MEDICINE SUBJECTS =====
   {
     subject: "Neurology",
+    category: "Medicine & Health",
     lcc: { code: "RC346-429", name: "Neurology. Diseases of the nervous system", parent: "R" },
     ddc: { code: "616.8", name: "Nervous system diseases", parent: "610" },
     udc: { code: "616.8", name: "Neurology. Nervous system", parent: "616" },
@@ -528,6 +598,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Cardiology",
+    category: "Medicine & Health",
     lcc: { code: "RC666-701", name: "Diseases of the circulatory (cardiovascular) system", parent: "R" },
     ddc: { code: "616.1", name: "Circulatory system diseases", parent: "610" },
     udc: { code: "616.1", name: "Cardiovascular system diseases", parent: "616" },
@@ -536,6 +607,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Pediatrics",
+    category: "Medicine & Health",
     lcc: { code: "RJ", name: "Pediatrics", parent: "R" },
     ddc: { code: "618.92", name: "Pediatrics", parent: "610" },
     udc: { code: "616-053.2", name: "Pediatric diseases", parent: "616" },
@@ -544,6 +616,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Psychiatry",
+    category: "Medicine & Health",
     lcc: { code: "RC435-571", name: "Psychiatry", parent: "R" },
     ddc: { code: "616.89", name: "Mental disorders", parent: "610" },
     udc: { code: "616.89", name: "Psychiatry", parent: "616" },
@@ -552,6 +625,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Microbiology",
+    category: "Medicine & Health",
     lcc: { code: "QR1-502", name: "Microbiology", parent: "Q" },
     ddc: { code: "579", name: "Microorganisms, fungi & algae", parent: "570" },
     udc: { code: "579", name: "Microbiology", parent: "57" },
@@ -560,6 +634,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Public Health",
+    category: "Medicine & Health",
     lcc: { code: "RA1-1270", name: "Public aspects of medicine", parent: "R" },
     ddc: { code: "614", name: "Incidence and prevention of disease", parent: "610" },
     udc: { code: "614", name: "Public health. Hygiene", parent: "61" },
@@ -570,6 +645,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL SCIENCE SUBJECTS =====
   {
     subject: "Geology",
+    category: "Science",
     lcc: { code: "QE1-996.5", name: "Geology", parent: "Q" },
     ddc: { code: "551", name: "Geology, hydrology, meteorology", parent: "550" },
     udc: { code: "551", name: "Geology", parent: "55" },
@@ -577,6 +653,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Meteorology",
+    category: "Science",
     lcc: { code: "QC851-999", name: "Meteorology. Climatology", parent: "QC" },
     ddc: { code: "551.5", name: "Meteorology", parent: "550" },
     udc: { code: "551.5", name: "Meteorology", parent: "55" },
@@ -584,6 +661,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Oceanography",
+    category: "Science",
     lcc: { code: "GC1-1581", name: "Oceanography", parent: null },
     ddc: { code: "551.46", name: "Oceanography", parent: "550" },
     udc: { code: "551.46", name: "Oceanography", parent: "55" },
@@ -591,6 +669,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Genetics",
+    category: "Science",
     lcc: { code: "QH426-470", name: "Genetics", parent: "QH" },
     ddc: { code: "576.5", name: "Genetics", parent: "570" },
     udc: { code: "576.5", name: "Genetics", parent: "57" },
@@ -598,6 +677,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Ecology",
+    category: "Science",
     lcc: { code: "QH540-549.5", name: "Ecology", parent: "QH" },
     ddc: { code: "577", name: "Ecology", parent: "570" },
     udc: { code: "574", name: "General ecology", parent: "57" },
@@ -605,6 +685,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Astrophysics",
+    category: "Science",
     lcc: { code: "QB460-480", name: "Astrophysics", parent: "QB" },
     ddc: { code: "523.01", name: "Astrophysics", parent: "520" },
     udc: { code: "524", name: "Astrophysics. Cosmology", parent: "52" },
@@ -614,6 +695,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL ARTS SUBJECTS =====
   {
     subject: "Painting",
+    category: "Arts",
     lcc: { code: "ND1000-2495", name: "Painting", parent: "N" },
     ddc: { code: "750", name: "Painting & paintings", parent: "700" },
     udc: { code: "75", name: "Painting", parent: "7" },
@@ -621,6 +703,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Sculpture",
+    category: "Arts",
     lcc: { code: "NB1000-1952", name: "Sculpture", parent: "N" },
     ddc: { code: "730", name: "Plastic arts. Sculpture", parent: "700" },
     udc: { code: "73", name: "Plastic arts. Sculpture", parent: "7" },
@@ -628,6 +711,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Architecture",
+    category: "Arts",
     lcc: { code: "NA1-9428", name: "Architecture", parent: null },
     ddc: { code: "720", name: "Architecture", parent: "700" },
     udc: { code: "72", name: "Architecture", parent: "7" },
@@ -635,6 +719,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Photography",
+    category: "Arts",
     lcc: { code: "TR1-1050", name: "Photography", parent: null },
     ddc: { code: "770", name: "Photography, photographs & computer graphics", parent: "700" },
     udc: { code: "77", name: "Photography. Photographs", parent: "7" },
@@ -642,6 +727,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Film Studies",
+    category: "Arts",
     lcc: { code: "PN1993-1999", name: "Motion pictures", parent: "PN" },
     ddc: { code: "791.43", name: "Motion pictures", parent: "790" },
     udc: { code: "791.2", name: "Cinematography", parent: "791" },
@@ -649,6 +735,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Theatre",
+    category: "Arts",
     lcc: { code: "PN2000-3300", name: "Drama. Theater", parent: "PN" },
     ddc: { code: "792", name: "Stage presentations", parent: "790" },
     udc: { code: "792", name: "Theatre", parent: "7" },
@@ -658,6 +745,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL HISTORY SUBJECTS =====
   {
     subject: "Ancient History",
+    category: "History & Geography",
     lcc: { code: "D51-90", name: "Ancient history", parent: "D" },
     ddc: { code: "930", name: "History of ancient world", parent: "900" },
     udc: { code: "930", name: "History of the ancient world", parent: "9" },
@@ -665,6 +753,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Medieval History",
+    category: "History & Geography",
     lcc: { code: "D111-203", name: "Medieval history", parent: "D" },
     ddc: { code: "940.1", name: "Medieval Europe", parent: "940" },
     udc: { code: "94(4)", name: "Medieval history of Europe", parent: "94" },
@@ -672,6 +761,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Renaissance",
+    category: "History & Geography",
     lcc: { code: "CB359-460", name: "Renaissance", parent: "CB" },
     ddc: { code: "940.21-940.24", name: "Renaissance period", parent: "940" },
     udc: { code: "94(4)04", name: "Renaissance Europe", parent: "94" },
@@ -679,6 +769,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Modern History",
+    category: "History & Geography",
     lcc: { code: "D203-4001", name: "History of Europe", parent: "D" },
     ddc: { code: "940.2-940.5", name: "Modern history", parent: "940" },
     udc: { code: "94(100)16-19", name: "Modern history of the world", parent: "94" },
@@ -686,6 +777,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "World War II",
+    category: "History & Geography",
     lcc: { code: "D731-830", name: "World War II", parent: "D" },
     ddc: { code: "940.53-940.5489", name: "World War II", parent: "940" },
     udc: { code: "94(100)1939-1945", name: "Second World War", parent: "94" },
@@ -693,6 +785,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Asian History",
+    category: "History & Geography",
     lcc: { code: "DS1-937", name: "History of Asia", parent: "D" },
     ddc: { code: "950", name: "History of Asia", parent: "900" },
     udc: { code: "95", name: "History of Asia", parent: "9" },
@@ -700,6 +793,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "African History",
+    category: "History & Geography",
     lcc: { code: "DT1-3415", name: "History of Africa", parent: "D" },
     ddc: { code: "960", name: "History of Africa", parent: "900" },
     udc: { code: "96", name: "History of Africa", parent: "9" },
@@ -709,6 +803,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL LITERATURE SUBJECTS =====
   {
     subject: "American Literature",
+    category: "Language & Literature",
     lcc: { code: "PS1-3580", name: "American literature", parent: "P" },
     ddc: { code: "810", name: "American literature in English", parent: "800" },
     udc: { code: "821.111.09", name: "American literature in English", parent: "821.111" },
@@ -716,6 +811,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "German Literature",
+    category: "Language & Literature",
     lcc: { code: "PT1-4897", name: "German literature", parent: "P" },
     ddc: { code: "830", name: "German & related literatures", parent: "800" },
     udc: { code: "830", name: "German literature", parent: "8" },
@@ -723,6 +819,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Spanish Literature",
+    category: "Language & Literature",
     lcc: { code: "PQ6001-8929", name: "Spanish literature", parent: "PQ" },
     ddc: { code: "860", name: "Spanish & Portuguese literatures", parent: "800" },
     udc: { code: "860", name: "Spanish & Portuguese literature", parent: "8" },
@@ -730,6 +827,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Russian Literature",
+    category: "Language & Literature",
     lcc: { code: "PG2900-3999", name: "Russian literature", parent: "PG" },
     ddc: { code: "891.7", name: "Russian literature", parent: "890" },
     udc: { code: "882", name: "Russian literature", parent: "8" },
@@ -737,6 +835,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Poetry",
+    category: "Language & Literature",
     lcc: { code: "PN1010-1550", name: "Poetry", parent: "PN" },
     ddc: { code: "808.1", name: "Poetry", parent: "800" },
     udc: { code: "82-1", name: "Poetry", parent: "8" },
@@ -744,6 +843,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Drama",
+    category: "Language & Literature",
     lcc: { code: "PN1600-3300", name: "Drama. Theater", parent: "PN" },
     ddc: { code: "808.2", name: "Drama", parent: "800" },
     udc: { code: "82-2", name: "Drama", parent: "8" },
@@ -753,6 +853,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL TECHNOLOGY SUBJECTS =====
   {
     subject: "Computer Hardware",
+    category: "Technology",
     lcc: { code: "TK7885-7895", name: "Computer engineering. Computer hardware", parent: "TK" },
     ddc: { code: "004.2", name: "Computer architecture and design", parent: "004" },
     udc: { code: "004.2", name: "Computer architecture & design", parent: "004" },
@@ -760,6 +861,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Database Systems",
+    category: "Technology",
     lcc: { code: "QA76.9.D3", name: "Database management", parent: "QA75.5-76.95" },
     ddc: { code: "005.74", name: "Database management", parent: "005" },
     udc: { code: "005.74", name: "Database systems", parent: "005" },
@@ -767,6 +869,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Artificial Neural Networks",
+    category: "Technology",
     lcc: { code: "QA76.87", name: "Neural computers. Neural networks", parent: "QA75.5-76.95" },
     ddc: { code: "006.32", name: "Neural networks", parent: "006.3" },
     udc: { code: "004.85", name: "Neural networks", parent: "004.8" },
@@ -774,6 +877,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Nanotechnology",
+    category: "Technology",
     lcc: { code: "T174.7-618.97", name: "Nanotechnology", parent: "T" },
     ddc: { code: "620.5", name: "Nanotechnology", parent: "620" },
     udc: { code: "620.5", name: "Nanotechnology", parent: "62" },
@@ -781,6 +885,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Biotechnology",
+    category: "Technology",
     lcc: { code: "TP248.1-248.65", name: "Biotechnology", parent: "TP" },
     ddc: { code: "660.6", name: "Biochemical engineering. Biotechnology", parent: "660" },
     udc: { code: "606", name: "Biotechnology", parent: "6" },
@@ -790,6 +895,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL SOCIAL SCIENCES SUBJECTS =====
   {
     subject: "Anthropology",
+    category: "Social Sciences",
     lcc: { code: "GN1-890", name: "Anthropology", parent: null },
     ddc: { code: "301", name: "Sociology & anthropology", parent: "300" },
     udc: { code: "39", name: "Ethnology. Anthropology. Prehistory", parent: "3" },
@@ -797,6 +903,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Demography",
+    category: "Social Sciences",
     lcc: { code: "HB848-3697", name: "Demography. Population. Vital events", parent: "HB" },
     ddc: { code: "304.6", name: "Demography", parent: "304" },
     udc: { code: "314.1", name: "Demography. Population studies", parent: "314" },
@@ -804,6 +911,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Urban Studies",
+    category: "Social Sciences",
     lcc: { code: "HT101-859", name: "Urban planning. City planning", parent: "H" },
     ddc: { code: "307.76", name: "Urban sociology", parent: "307" },
     udc: { code: "304.444", name: "Urban studies", parent: "304" },
@@ -811,6 +919,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Linguistics - Sociolinguistics",
+    category: "Social Sciences",
     lcc: { code: "P40", name: "Sociolinguistics", parent: "P" },
     ddc: { code: "417", name: "Dialectology & historical linguistics", parent: "400" },
     udc: { code: "811.6", name: "Sociolinguistics", parent: "811" },
@@ -818,6 +927,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Cultural Anthropology",
+    category: "Social Sciences",
     lcc: { code: "GN301-674", name: "Ethnology. Social and cultural anthropology", parent: "GN" },
     ddc: { code: "306", name: "Culture & institutions", parent: "300" },
     udc: { code: "39", name: "Ethnology. Anthropology", parent: "3" },
@@ -827,6 +937,7 @@ const CLASSIFICATION_DATA = [
   // ===== ADDITIONAL RELIGION SUBJECTS =====
   {
     subject: "Judaism",
+    category: "Religion",
     lcc: { code: "BM1-990", name: "Judaism", parent: "BL" },
     ddc: { code: "296", name: "Judaism", parent: "200" },
     udc: { code: "28", name: "Jewish religion. Judaism", parent: "2" },
@@ -834,6 +945,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Hindu Scriptures",
+    category: "Religion",
     lcc: { code: "BL1110-1140", name: "Hindu scriptures", parent: "BL" },
     ddc: { code: "294.54", name: "Hindu sacred writings", parent: "200" },
     udc: { code: "294.53", name: "Hindu sacred books", parent: "2" },
@@ -841,6 +953,7 @@ const CLASSIFICATION_DATA = [
   },
   {
     subject: "Comparative Religion",
+    category: "Religion",
     lcc: { code: "BL410-820", name: "Religions. History and principles of religions", parent: "BL" },
     ddc: { code: "200", name: "Religion", parent: null },
     udc: { code: "21", name: "Comparative religion. History of religion", parent: "2" },
