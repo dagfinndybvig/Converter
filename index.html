@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Classification Explorer</title>
+    <meta name="description" content="Explore how subjects are classified across LCC, DDC, and UDC systems">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Library Classification Explorer</h1>
+                <p class="subtitle">See how the same subject is classified across three major systems</p>
+                <button id="aboutBtn" class="btn-about">About</button>
+            </div>
+        </header>
+
+        <!-- About Modal -->
+        <div id="aboutModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>About Library Classification Explorer</h2>
+                    <button id="closeModalBtn" class="btn-close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3>What is this?</h3>
+                    <p>
+                        This tool demonstrates how the same academic subject is classified differently 
+                        across three major library classification systems: 
+                        <strong>Library of Congress Classification</strong>, 
+                        <strong>Dewey Decimal Classification</strong>, and 
+                        <strong>Universal Decimal Classification</strong>.
+                    </p>
+
+                    <h3>Why do classifications differ?</h3>
+                    <p>
+                        Each system was designed with different philosophical approaches, cultural contexts, 
+                        and historical periods in mind. They organize knowledge in fundamentally different ways:
+                    </p>
+                    <ul>
+                        <li><strong>Library of Congress Classification</strong> (1897): Alphabetic system designed for the Library of Congress, extremely detailed</li>
+                        <li><strong>Dewey Decimal Classification</strong> (1876): Numeric decimal system, designed for general use in libraries worldwide</li>
+                        <li><strong>Universal Decimal Classification</strong> (1895): Numeric decimal system with extensive auxiliary notation for complex subjects</li>
+                    </ul>
+
+                    <h3>How to use this tool</h3>
+                    <ol>
+                        <li><strong>Browse</strong> subjects using the category buttons or search box</li>
+                        <li><strong>Click</strong> any subject to see its classification across all three systems</li>
+                        <li><strong>Compare</strong> the call numbers, names, and hierarchy in each system</li>
+                        <li><strong>Read</strong> the structural analysis to understand why they differ</li>
+                    </ol>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Search by subject name or classification code</li>
+                        <li>Filter by category (Philosophy, Religion, Social Sciences, etc.)</li>
+                        <li>Toggle between grouped and flat subject list views</li>
+                        <li>View hierarchical relationships within each system</li>
+                        <li>See National Library of Medicine classifications for medical subjects</li>
+                    </ul>
+
+                    <h3>Data Sources</h3>
+                    <p>
+                        This demo contains <strong>over 150 curated subjects</strong> with manually verified mappings 
+                        between the Library of Congress Classification, Dewey Decimal Classification, and Universal Decimal Classification systems. 
+                        The mappings highlight both direct correspondences and structural divergences that make perfect conversion impossible.
+                    </p>
+
+                    <h3>Technical Notes</h3>
+                    <p>
+                        Pure HTML, CSS, and JavaScript application. No server required. No external dependencies. 
+                        Works in any modern web browser.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <p>Version 1.0 | Created as a demonstration tool</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search subjects (e.g., Psychology, Computer Science, Medicine...)" 
+                    autocomplete="off"
+                >
+                <button id="clearBtn" class="btn-clear" title="Clear search">x</button>
+            </div>
+            <div class="search-controls">
+                <label class="filter-label">
+                    <input type="checkbox" id="filterCategories" checked>
+                    <span>Show category groups</span>
+                </label>
+                <span id="resultCount" class="result-count"></span>
+            </div>
+            
+            <!-- Subject List -->
+            <div id="subjectList" class="subject-list"></div>
+        </section>
+
+        <!-- Comparison View (shown when a subject is selected) -->
+        <main id="comparisonView" class="comparison-view hidden">
+            <div class="comparison-header">
+                <h2 id="selectedSubject"></h2>
+                <button id="backToList" class="btn-secondary">Back to list</button>
+            </div>
+
+            <!-- Classification Cards -->
+            <div class="cards-container">
+                <!-- LCC Card -->
+                <div class="classification-card lcc-card">
+                    <div class="card-header">
+                        <h3>Library of Congress</h3>
+                        <span class="system-label">LCC</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="classification-detail" id="lccCode"></div>
+                        <div class="classification-name" id="lccName"></div>
+                        <div class="classification-parent" id="lccParent"></div>
+                        <div class="hierarchy-visual" id="lccHierarchy"></div>
+                    </div>
+                </div>
+
+                <!-- DDC Card -->
+                <div class="classification-card ddc-card">
+                    <div class="card-header">
+                        <h3>Dewey Decimal</h3>
+                        <span class="system-label">DDC</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="classification-detail" id="ddcCode"></div>
+                        <div class="classification-name" id="ddcName"></div>
+                        <div class="classification-parent" id="ddcParent"></div>
+                        <div class="hierarchy-visual" id="ddcHierarchy"></div>
+                    </div>
+                </div>
+
+                <!-- UDC Card -->
+                <div class="classification-card udc-card">
+                    <div class="card-header">
+                        <h3>Universal Decimal</h3>
+                        <span class="system-label">UDC</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="classification-detail" id="udcCode"></div>
+                        <div class="classification-name" id="udcName"></div>
+                        <div class="classification-parent" id="udcParent"></div>
+                        <div class="hierarchy-visual" id="udcHierarchy"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Structural Notes -->
+            <div class="notes-section">
+                <h4>Structural Analysis</h4>
+                <div id="structuralNote" class="structural-note"></div>
+            </div>
+
+            <!-- NLM Section (if available) -->
+            <div id="nlmSection" class="nlm-section hidden">
+                <h4>National Library of Medicine (NLM)</h4>
+                <div class="nlm-content">
+                    <span id="nlmCode"></span>
+                    <span id="nlmName"></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Category Navigation -->
+        <section id="categoryNav" class="category-nav">
+            <h4>Browse by Category</h4>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">All Subjects</button>
+                <button class="category-btn" data-category="Philosophy & Psychology">Philosophy & Psychology</button>
+                <button class="category-btn" data-category="Religion">Religion</button>
+                <button class="category-btn" data-category="Social Sciences">Social Sciences</button>
+                <button class="category-btn" data-category="Language & Literature">Language & Literature</button>
+                <button class="category-btn" data-category="Science">Science</button>
+                <button class="category-btn" data-category="Medicine & Health">Medicine & Health</button>
+                <button class="category-btn" data-category="Technology">Technology</button>
+                <button class="category-btn" data-category="Arts">Arts</button>
+                <button class="category-btn" data-category="History & Geography">History & Geography</button>
+                <button class="category-btn" data-category="Miscellaneous">Miscellaneous</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Library Classification Explorer v1.0 | Data: Curated mappings of LCC, DDC, UDC systems</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
