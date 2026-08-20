@@ -206,6 +206,7 @@ You are free to use, modify, and distribute this application for non-commercial 
 - Classification system data: Based on standard library classification schedules
 - Design: Custom responsive design using modern CSS
 - Icons/Styling: Pure CSS, no external dependencies
+- Tooling: Built with [Mistral Vibe](https://mistral.ai) as the client, driving various models served by the [NTNU HPC facility IDUN](https://www.hpc.ntnu.no/category/idun/)
 
 ---
 
