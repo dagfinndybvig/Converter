@@ -8,7 +8,7 @@ This tool was created to illustrate a fundamental concept in library science: **
 
 ## Features
 
-- **150+ Curated Subjects** across all major academic disciplines
+- **113 Curated Subjects** across all major academic disciplines
 - **Three Classification Systems** displayed side-by-side:
   - Library of Congress Classification (LCC)
   - Dewey Decimal Classification (DDC)
@@ -61,7 +61,7 @@ Converter/
 ├── index.html      # Main HTML file
 ├── styles.css     # All stylesheets
 ├── app.js         # Application logic
-├── data.js        # Curated classification mappings (150+ subjects)
+├── data.js        # Curated classification mappings (113 subjects)
 └── README.md       # This file
 ```
 
@@ -94,34 +94,34 @@ Converter/
 
 ## Data Contents
 
-The `data.js` file contains **over 150 manually curated subjects** organized into categories:
+The `data.js` file contains **113 manually curated subjects** organized into categories. Each entry carries an explicit `category` field used by the category filter:
 
-### Philosophy & Psychology (12 subjects)
-Philosophy, Metaphysics, Epistemology, Logic, Ethics, Psychology, Clinical Psychology, Developmental Psychology, Social Psychology, Cognitive Psychology, Experimental Psychology
+### Philosophy & Psychology (11 subjects)
+Philosophy (General), Metaphysics, Epistemology, Logic, Ethics (Moral Philosophy), Psychology, Experimental Psychology, Clinical Psychology, Developmental Psychology, Social Psychology, Cognitive Psychology
 
 ### Religion (8 subjects)
-Religion, Christianity, Buddhism, Islam, Hinduism, Judaism, Hindu Scriptures, Comparative Religion
+Religion (General), Christianity, Buddhism, Islam, Hinduism, Judaism, Hindu Scriptures, Comparative Religion
 
-### Social Sciences (11 subjects)
-Social Sciences, Sociology & Anthropology, Economics, Political Science, Law, Education, Anthropology, Demography, Urban Studies, Sociolinguistics, Cultural Anthropology
+### Social Sciences (16 subjects)
+Social Sciences (General), Sociology & Anthropology, Economics, Political Science, Law, Education, Constitutional Law, Criminal Law, International Law, Contract Law, Intellectual Property Law, Anthropology, Demography, Urban Studies, Linguistics - Sociolinguistics, Cultural Anthropology
 
-### Language & Literature (9 subjects)
+### Language & Literature (10 subjects)
 Linguistics, English Language, English Literature, French Literature, American Literature, German Literature, Spanish Literature, Russian Literature, Poetry, Drama
 
-### Science (13 subjects)
-Science, Mathematics, Computer Science, Artificial Intelligence, Astronomy, Physics, Chemistry, Biology, Botany, Geology, Meteorology, Oceanography, Genetics, Ecology, Astrophysics
+### Science (15 subjects)
+Science (General), Mathematics, Computer Science, Artificial Intelligence, Astronomy, Physics, Chemistry, Biology, Botany, Geology, Meteorology, Oceanography, Genetics, Ecology, Astrophysics
 
-### Medicine & Health (11 subjects)
-Medicine, Anatomy, Physiology, Pharmacology, Internal Medicine, Surgery, Neurology, Cardiology, Pediatrics, Psychiatry, Microbiology, Public Health
+### Medicine & Health (12 subjects)
+Medicine (General), Anatomy, Physiology, Pharmacology, Internal Medicine, Surgery, Neurology, Cardiology, Pediatrics, Psychiatry, Microbiology, Public Health
 
-### Technology (14 subjects)
-Technology, Engineering, Chemical Engineering, Electrical Engineering, Computer Engineering, Mechanical Engineering, Civil Engineering, Software Engineering, Robotics, Aerospace Engineering, Computer Hardware, Database Systems, Artificial Neural Networks, Nanotechnology, Biotechnology
+### Technology (15 subjects)
+Technology (General), Engineering, Chemical Engineering, Electrical Engineering, Computer Engineering, Mechanical Engineering, Civil Engineering, Software Engineering, Robotics, Aerospace Engineering, Computer Hardware, Database Systems, Artificial Neural Networks, Nanotechnology, Biotechnology
 
-### Arts (8 subjects)
-Fine Arts, Visual Arts, Music, Architecture, Painting, Sculpture, Photography, Theatre, Film Studies
+### Arts (10 subjects)
+Fine Arts, Visual Arts, Music, Literature (General), Painting, Sculpture, Architecture, Photography, Film Studies, Theatre
 
 ### History & Geography (13 subjects)
-History, World History, European History, United States History, Geography, Maps, Ancient History, Medieval History, Renaissance, Modern History, World War II, Asian History, African History
+History (General), World History, European History, United States History, Geography, Maps, Ancient History, Medieval History, Renaissance, Modern History, World War II, Asian History, African History
 
 ### Miscellaneous (3 subjects)
 Bibliography & Library Science, Information Science, General Works
@@ -175,6 +175,7 @@ Edit `data.js` and add entries to the `CLASSIFICATION_DATA` array:
 ```javascript
 {
   subject: "Your Subject Name",
+  category: "One of the category names listed above", // drives the category filter
   lcc: { code: "LCC_CODE", name: "LCC Name", parent: "PARENT_CODE" },
   ddc: { code: "DDC_CODE", name: "DDC Name", parent: "PARENT_CODE" },
   udc: { code: "UDC_CODE", name: "UDC Name", parent: "PARENT_CODE" },

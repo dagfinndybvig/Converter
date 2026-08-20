@@ -17,7 +17,7 @@ This is a well-designed, fully functional demonstration application that effecti
 
 ## Project Overview
 
-The Library Classification Explorer is a pure HTML/CSS/JavaScript application that allows users to explore how 150+ academic subjects are classified across four major library classification systems:
+The Library Classification Explorer is a pure HTML/CSS/JavaScript application that allows users to explore how 113 academic subjects are classified across four major library classification systems:
 - Library of Congress Classification (LCC)
 - Dewey Decimal Classification (DDC)
 - Universal Decimal Classification (UDC)
@@ -31,7 +31,7 @@ The application's core educational value is demonstrating that **perfect one-to-
 
 ### 1. Concept & Educational Value (10/10)
 - **Clear Purpose**: The project has a well-defined, valuable educational purpose
-- **Subject Coverage**: 150+ subjects across 10+ academic disciplines (Philosophy, Religion, Social Sciences, Language & Literature, Science, Medicine, Technology, Arts, History & Geography, Miscellaneous)
+- **Subject Coverage**: 113 subjects across 10 academic disciplines (Philosophy, Religion, Social Sciences, Language & Literature, Science, Medicine, Technology, Arts, History & Geography, Miscellaneous)
 - **Pedagogical Approach**: Effectively demonstrates abstract concepts through concrete examples
 - **Structural Insights**: Each subject includes notes explaining why classifications differ
 
@@ -75,7 +75,7 @@ The application's core educational value is demonstrating that **perfect one-to-
 - **Event Handling**: Proper event delegation and cleanup
 
 ### 7. Data Quality (10/10)
-- **Comprehensive**: 150+ manually curated subjects
+- **Comprehensive**: 113 manually curated subjects
 - **Accurate**: Mappings appear to be well-researched and verified
 - **Consistent Structure**: Each entry follows the same format with subject, lcc, ddc, udc, optional nlm, and note fields
 - **Categorization**: Subjects are well-organized into logical categories
@@ -87,12 +87,10 @@ The application's core educational value is demonstrating that **perfect one-to-
 
 ### Minor Issues (Non-Critical)
 
-1. **Category Detection Algorithm** (app.js lines 48-99)
-   - Currently uses string matching to determine subject categories
-   - This is fragile and could be improved by:
-     - Adding a `category` field to each subject in data.js
-     - Or creating a more robust mapping system
-   - **Impact**: Low - works for current dataset but may need updating if more subjects are added
+1. **Category Detection Algorithm** (app.js, formerly lines 48-99) — **RESOLVED**
+   - The original implementation inferred each subject's category by substring-matching the subject name. This was fragile and misclassified 41 of 113 subjects (36%): e.g. "Metaphysics" matched "physics" (Science), religions and most arts matched nothing (Miscellaneous). Miscellaneous swallowed 34 subjects instead of 3; Religion and Arts showed 2-3 entries instead of 8-10.
+   - **Fix applied**: An explicit `category` field was added to every entry in data.js (derived from the section comment each entry lives under), and app.js now reads `subject.category` directly at both call sites (grouped-list rendering and category filtering). A `|| 'Miscellaneous'` fallback preserves behavior for any future entry that omits the field.
+   - **Verification**: `node --check` passes on both files; all 113 entries have a category matching their section (0 missing, 0 mismatches); end-to-end simulation of the filter logic returns correct counts for all 11 category buttons.
 
 2. **Search Optimization**
    - Search is case-insensitive but could benefit from:
@@ -127,14 +125,14 @@ The application's core educational value is demonstrating that **perfect one-to-
 
 ## Code Analysis
 
-### data.js (854 lines)
+### data.js (967 lines)
 - **Structure**: Excellent - well-organized array of objects
-- **Data Model**: Each subject has: subject (string), lcc (object), ddc (object), udc (object), optional nlm (object), note (string)
+- **Data Model**: Each subject has: subject (string), category (string), lcc (object), ddc (object), udc (object), optional nlm (object), note (string)
 - **Organization**: Logically grouped by discipline with clear section comments
 - **Quality**: High - data appears accurate and comprehensive
 - **Maintainability**: Easy to add new subjects by following the existing pattern
 
-### app.js (365 lines)
+### app.js (311 lines)
 - **Architecture**: Clear separation of functions
 - **State Management**: Uses module-level variables for state (filteredData, currentCategory)
 - **Functions**: Well-named, single-purpose functions
@@ -170,7 +168,7 @@ The application's core educational value is demonstrating that **perfect one-to-
 
 ### Runtime Performance
 - **Data Loading**: Static data loads instantly
-- **Search**: O(n) complexity where n=150 subjects - effectively instant
+- **Search**: O(n) complexity where n=113 subjects - effectively instant
 - **Rendering**: Efficient DOM updates using string concatenation
 - **Memory**: Minimal memory footprint - no memory leaks detected
 
@@ -183,7 +181,7 @@ The application's core educational value is demonstrating that **perfect one-to-
 - **No User Input Storage**: No data persistence, no localStorage usage that could be exploited
 - **No External Requests**: No API calls, no data exfiltration possible
 - **Content Security**: All content is static and curated
-- **XSS Protection**: Uses textContent (not innerHTML) for dynamic content insertion
+- **XSS Protection**: The comparison view uses textContent for dynamic content insertion. The subject list is built with innerHTML using interpolated subject names and codes; because all data is static and curated (no user input is ever rendered), the practical XSS risk is nil, but the list rendering is not hardened against untrusted data.
 
 ---
 
@@ -242,7 +240,7 @@ The application's core educational value is demonstrating that **perfect one-to-
 | Feature | This Project | Alternative Tools |
 |--------|-------------|-----------------|
 | Number of Systems | 4 (LCC, DDC, UDC, NLM) | Typically 2-3 |
-| Number of Subjects | 150+ | Varies (often fewer) |
+| Number of Subjects | 113 | Varies (often fewer) |
 | Offline Capable | Yes | Often no |
 | Open Source | Yes | Often no |
 | Dependencies | None | Usually has dependencies |
@@ -256,7 +254,7 @@ The application's core educational value is demonstrating that **perfect one-to-
 ## Future Enhancement Ideas
 
 ### High Value
-1. **Add more subjects** - Expand beyond 150 to cover more edge cases
+1. **Add more subjects** - Expand beyond 113 to cover more edge cases
 2. **Add more classification systems** - BISAC, NDC, etc.
 3. **Visual comparison tools** - Venn diagrams, tree visualizations
 4. **Export functionality** - Allow users to export filtered results
@@ -286,7 +284,7 @@ The Library Classification Explorer is an **outstanding** demonstration applicat
 
 **Final Rating: 9.5/10 - Highly Recommended**
 
-The minor issues identified (category detection algorithm, mobile UX tweaks, accessibility improvements) are all easily addressable and do not detract from the overall excellence of the project. This is a model for how educational demonstration applications should be built.
+The minor issues identified (mobile UX tweaks, accessibility improvements) are all easily addressable and do not detract from the overall excellence of the project. The category detection algorithm issue identified in the original evaluation has been resolved. This is a model for how educational demonstration applications should be built.
 
 ---
 
@@ -294,7 +292,7 @@ The minor issues identified (category detection algorithm, mobile UX tweaks, acc
 
 1. **For Immediate Use**: Deploy as-is - the application is fully functional and ready for production
 2. **For Long-term Maintenance**: 
-   - Add category field to data.js entries instead of inferring from subject names
+   - ~~Add category field to data.js entries instead of inferring from subject names~~ (done)
    - Add basic unit tests
    - Implement accessibility improvements (ARIA labels, keyboard navigation)
 3. **For Enhanced Value**:
